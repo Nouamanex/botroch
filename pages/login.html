@@ -38,6 +38,25 @@
             height: 100%;
             object-fit: cover;
         }
+         .search-box {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.search-input {
+    border-radius: 25px 0 0 25px;
+    border-right: none;
+}
+
+.search-btn {
+    border-radius: 0 25px 25px 0;
+    border-left: none;
+}
+
+.search-input:focus {
+    box-shadow: none;
+}
     </style>
 </head>
 <body>
@@ -59,6 +78,25 @@
             </div>
         </div>
     </nav>
+    <div class="container mt-4">
+    <form class="search-box" method="POST" action="">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="input-group">
+                    <input type="text" class="form-control search-input" placeholder="Saisir le nom du produit" name="txtS">
+                    <button type="submit" class="btn btn-primary search-btn" name="search">recherche</button>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="input-group">
+                    <input type="text" class="form-control search-input" placeholder="Saisir le prix max">
+                    <input type="text" class="form-control search-input" placeholder="Saisir le prix min">
+                    <button type="submit" class="btn btn-primary search-btn" name="search">recherche</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
     <div class="container py-5">
         <div class="row">
             <div class="col-lg-6">
